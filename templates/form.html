@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block title %}CardioHub{% endblock %}
+{% block content %}    
+
+
+
+	    <div class="template">
+      <form class="card mb-4 form" method="post" action="/resultat">
+        <div class="card-header ass">
+          <h4 class="card-heading">PATIENT FORMAULAIRE</h4>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-6 col-md-3">
+              <div class="mb-4">
+                <label class="form-label">Age</label>
+                <input class="form-control" name="age" id="Age" placeholder="age"
+                required
+                pattern="[0-9]+" maxlength="3">
+                      
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="mb-4">
+                <label class="form-label">Sex</label>
+                <select class="form-control"  required name="sex" id="sex">
+                    <option value="" disabled selected hidden></option>
+                   <option value="Homme">Homme</option>
+                   <option value="Femme">Femme</option>
+                  
+                 </select>
+              </div>
+            </div>
+           
+
+            <div class="col-sm-6 col-md-3">
+              <div class="mb-4">
+                <label class="form-label">ChestPainType</label>
+                <select class="form-control" required name="chest" id="chest">
+             
+                    <option value="" disabled selected hidden></option>
+                   <option value="TA">TA</option>
+                   <option value="ATA">ATA</option>
+                   <option value="NAP">NAP</option>
+                   <option value="AZY">AZY</option>
+                 </select>
+                
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="mb-4">
+                <label class="form-label">RestingECG</label>
+                <select class="form-control" required name="restingecg" id="restingecg">
+                    <option value="" disabled selected hidden></option>
+                   <option value="Normal">Normal</option>
+                   <option value="ST">ST</option>
+                   <option value="HVG">HVG</option>
+                 </select>
+
+                 </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="mb-4">
+                <label class="form-label">ExerciseAngina</label>
+                       
+                <select class="form-control"   name="exercise" id="exercise" required>
+                    <option value="" disabled selected hidden></option>
+                   <option value="Y">Y</option>
+                   <option value="N">N</option>
+                  
+                 </select>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="mb-4">
+                <label class="form-label">ST_Slope</label>
+                <select class="form-control"  name="stslope" id="stslope" required>
+                    <option value="" disabled selected hidden></option>
+                   <option value="UP">UP</option>
+                   <option value="FLAT">FLAT</option>
+                   <option value="DOWN">DOWN</option>
+                 </select>
+               
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="mb-4">
+                <label class="form-label">RestingBp</label>
+                <input class="form-control" type="text"  name="restingbp" placeholder="restingBp" 
+                pattern="[0-9]+" maxlength="3" required/>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="mb-4">
+                <label class="form-label">MaxHR</label>
+                <input class="form-control" type="text" name="maxhr"placeholder="MaxHR" 
+                pattern="[0-9]+" maxlength="3" required/>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="mb-4">
+                  <label class="form-label">Cholesterol</label>
+                  <input class="form-control" type="text" name="cholesterol" placeholder="Cholesterol" 
+                  pattern="[0-9]+" maxlength="3" required />
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="mb-4">
+                  <label class="form-label">Oldpeak</label>
+                  <input class="form-control" type="text" name="oldpeak" placeholder="Oldpeak"  
+                  pattern="[0-9.]+" maxlength="4" required />
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="mb-4">
+                  <label class="form-label">FastingBS</label>
+                  <input class="form-control" type="text" name="fastingbs" placeholder="FastingBS" 
+                  pattern="[0-9]+" maxlength="3" required/>
+                </div>
+              </div>
+              
+           
+           
+        <div class="card-footer text-end">
+          <button class="btn btn-primary task" type="submit">
+            Tester
+          </button>
+        </div>
+      </form>
+    </div>
+{% endblock %}

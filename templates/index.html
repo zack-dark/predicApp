@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% block title%}CardioHub{%endblock%}
+
+{% block content %}
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image-->
+                <img class="masthead-avatar mb-5 imgsec" src="{{url_for('static',filename='assets/img/imgsec.jpg')}}" alt="..." />
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">Prediction d'insuffisance cardiaque</h1>
+                <h3 class="text-uppercase mb-0">Changing Lives, Right Here.</h3>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">Entrez vos parametres et apprenez plus sur votre etat de sante.Posez vos questions a des medecins specialises.</p>
+            </div>
+        </header>
+        <!-- Portfolio Section-->
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container consult">
+                
+                    <!-- Portfolio Item 2-->
+                    <div class="col-md-6 col-lg-4 mb-5 consult1">
+                        <form action="/form">
+                              <div class="form-floating mb-3">
+                        <!--div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            
+                               
+                            <img class="img-fluid" src="assets/img/auth/consult.png" alt="..." />
+                        </div-->
+			<img class="img-fluid" src="{{url_for('static',filename='assets/img/auth/consult.png')}}" alt="..." />
+                        <button class="btn btn-primary text-uppercase btn-xl " id="submitButton" type="submit">Consulter</button>
+                            </div>
+                        </form>
+                        </div>
+                            
+                    
+                   
+            </div>
+        </section>
+        <!-- About Section-->
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">A propos</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- About Section Content-->
+                <div class="row">
+                    <div class="col-lg-4 ms-auto"><p class="lead">Parfois, les antécédents médicaux et l’examen physique seuls suggèrent à un médecin que la personne est atteinte d’une maladie cardiaque ou vasculaire. Cependant, des procédures diagnostiques spéciales sont souvent nécessaires pour confirmer le diagnostic, préciser l’extension et la gravité de la maladie, et contribuer au choix du traitement.</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">Notre simple Application Web vous permet de prédire si vous êtes proche d'une maladie cardiaques en traitant des paramètres spéciales a votre propre corps !!</p></div>
+                </div>
+                <!-- About Section Button-->
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" target="_blank" href="https://www.msdmanuals.com/fr/accueil/troubles-cardiaques-et-vasculaires/diagnostic-des-maladies-cardiovasculaires/introduction-au-diagnostic-des-maladies-cardiovasculaires">
+                        
+                        voir l'article...
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact us</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Contact Section Form-->
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-xl-7">
+                        
+                        <form id="contactForm" method='Post' action='/contact'>
+                            <!-- Name input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="name" name='name' type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Full name</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="email" type="email" name="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <label for="email">Email address</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <!-- Phone number input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="phone" type="tel" name="phone" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <label for="phone">Phone number</label>
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" type="text" name='message' placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <label for="message">Message</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                            
+                            <!-- Submit Button-->
+                            <button class="btn btn-primary btn-xl " id="submitButton" type="submit">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endblock %}
+        
