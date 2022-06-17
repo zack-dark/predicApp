@@ -220,7 +220,7 @@ def contact():
 
 		server=smtplib.SMTP("smtp.gmail.com",587)
 		server.starttls()
-		server.login("penitration.testing2022@gmail.com","fdzdnvxihyevsnup")
+		server.login("penitration.testing2022@gmail.com","password")
 		server.sendmail("penitration.testing2022@gmail.com",email,message)
 		# msg=Message(subject=f"Mail from {name}",body=f"Name: {name}\nE-Mail: {email}\nPhone:{phone}\nMessage: {message}",sender='noreply@demo.com',recipients=['penitration.testing2022@gmail.com'])
 		# mail.send(msg)
